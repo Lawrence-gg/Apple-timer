@@ -1,36 +1,47 @@
 let counting = undefined;
+let minuteSetting = 25;
 
-const status = document.querySelector('.timer-status');
 const minutes = document.querySelector('.timer-minutes');
 const seconds = document.querySelector('.timer-seconds');
 
 const startBtn = document.querySelector('.timer-mode-start');
 const pauseBtn = document.querySelector('.timer-mode-pause');
 const resetBtn = document.querySelector('.timer-mode-reset');
-const breakTimeBtn = document.querySelector('.timer-mode-break');
+const switchModeBtn = document.querySelector('.timer-mode-break');
+const quote = document.querySelector('.quote');
 
 //Starting the timer;
 startBtn.addEventListener('click', () => {
   if (counting == undefined) counting = setInterval(timer, 1000);
+  quote.classList.remove('hide');
 });
-
+//Pause
 pauseBtn.addEventListener('click', () => {
   counting = clearInterval(counting);
 });
 
+//Reset
 resetBtn.addEventListener('click', () => {
   counting = clearInterval(counting);
   resetTimer();
 });
 
-breakTimeBtn.addEventListener('click', () => {
+//Work mode: Default 25 Minutes, Break mode: 5 Minutes;
+switchModeBtn.addEventListener('click', () => {
   counting = clearInterval(counting);
-  minutes.innerHTML = '5';
-  seconds.innerHTML = '00';
+  if (switchModeBtn.innerHTML == 'Break') {
+    minuteSetting = 5;
+    switchModeBtn.innerHTML = 'Work';
+  } else {
+    minuteSetting = 25;
+    switchModeBtn.innerHTML = 'Break';
+  }
+  resetTimer();
 });
 
+//reset
 function resetTimer() {
-  minutes.innerHTML = '25';
+  minutes.innerHTML = minuteSetting;
   seconds.innerHTML = '00';
 }
 
@@ -61,6 +72,6 @@ function updateTime(currentMinutes, currentSeconds) {
     document.title = `${currentMinutes}:0${currentSeconds}`;
   } else {
     seconds.innerHTML = currentSeconds;
-    document.title = `${currentMinutes}:${currentSeconds}`;
+    document.title = `Time: ${currentMinutes}:${currentSeconds}`;
   }
 }
