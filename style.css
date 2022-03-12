@@ -1,0 +1,47 @@
+body {
+  background-color: rgb(240, 100, 100);
+  font-family: monospace;
+  color: whitesmoke;
+}
+
+h1 {
+  text-align: center;
+  font-size: 4rem;
+  -webkit-text-stroke: 2px black;
+  text-stroke: 2px black;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+img {
+  height: 60px;
+  width: auto;
+}
+
+
+
+
+
+.container {
+  width: 50%;
+  height: 50%;
+  border: 1px solid blue;
+  position: absolute;
+  top: 10%;
+  left: 25%;
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+}
+
+.timer {
+  margin-top: 10rem;
+  text-align: center;
+}
+
+.timer-controls {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-items: center
+}
