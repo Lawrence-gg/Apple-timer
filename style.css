@@ -20,15 +20,11 @@ img {
   width: auto;
 }
 
-
-
-
-
 .container {
   width: 50%;
   height: 50%;
   position: absolute;
-  top: 10%;
+  top: 25%;
   left: 25%;
   display: grid;
   grid-template-rows: 1fr 1fr;
@@ -42,5 +38,6 @@ img {
 .timer-controls {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 10%;
   justify-items: center
 }
