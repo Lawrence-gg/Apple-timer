@@ -1,5 +1,5 @@
 let counting = undefined;
-let minuteSetting = 25;
+let minuteSetting = '25';
 
 const minutes = document.querySelector('.timer-minutes');
 const seconds = document.querySelector('.timer-seconds');
@@ -30,10 +30,10 @@ resetBtn.addEventListener('click', () => {
 switchModeBtn.addEventListener('click', () => {
   counting = clearInterval(counting);
   if (switchModeBtn.innerHTML == 'Break') {
-    minuteSetting = 5;
+    minuteSetting = '05';
     switchModeBtn.innerHTML = 'Work';
   } else {
-    minuteSetting = 25;
+    minuteSetting = '25';
     switchModeBtn.innerHTML = 'Break';
   }
   resetTimer();

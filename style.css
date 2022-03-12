@@ -1,14 +1,25 @@
+:root {
+  margin: 0px;
+  padding: 0px;
+  border: 0;
+  font: inherit;
+  box-sizing: border-box;
+}
+
+
 body {
   background-color: rgb(240, 100, 100);
   font-family: monospace;
   color: whitesmoke;
+  width: 100%;
+  overflow: hidden;
 }
 
 h1 {
   text-align: center;
   font-size: 4rem;
   -webkit-text-stroke: 3px black;
-  text-stroke: 2px black;
+  text-stroke: 3px black;
 }
 
 h2 {
@@ -33,6 +44,9 @@ img {
   width: 75%;
   margin: 0 auto;
   display: hidden;
+  text-align: center;
+  box-shadow: 3px 3px #444;
+  /*animation: fade-In 1.2s; TODO implement animation */
 }
 
 .hide {
@@ -74,4 +88,24 @@ button {
   font-size: 1rem;
   font-family: monospace;
   border-radius: 12px;
+}
+
+button:hover {
+  transform: scale(1.08);
+}
+
+
+button:active {
+  box-shadow: 0 5px #333;
+  transform: translateY(2px);
+}
+
+
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  background-color: #222;
 }
