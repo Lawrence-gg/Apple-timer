@@ -27,7 +27,6 @@ img {
 .container {
   width: 50%;
   height: 50%;
-  border: 1px solid blue;
   position: absolute;
   top: 10%;
   left: 25%;
@@ -42,6 +41,6 @@ img {
 
 .timer-controls {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
   justify-items: center
 }
