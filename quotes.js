@@ -104,5 +104,5 @@ function chooseQuote(obj) {
   let key = Object.keys(obj);
   let chosenQuote = obj[key[(key.length * Math.random()) >> 0]];
   let author = obj[key[(key.length * Math.random()) >> 0]].author;
-  return (quoteText.textContent = `${chosenQuote.quote} - ${chosenQuote.author}`);
+  return (quoteText.textContent = `${chosenQuote.quote} - ${chosenQuote.author}.`);
 }
