@@ -8,7 +8,8 @@
 
 
 body {
-  background-color: rgb(240, 100, 100);
+  /*background-color: rgb(240, 100, 100); */
+  background-color: rgb(110, 220, 110); 
   font-family: monospace;
   color: whitesmoke;
   width: 100%;
@@ -27,7 +28,7 @@ h2 {
 }
 
 .timer > h1 {
-  font-size: 10rem;
+  font-size: 8rem;
   -webkit-text-stroke: 3px black;
   text-stroke: 3px black;
 }
@@ -83,7 +84,7 @@ button {
   background-color: transparent;
   border: 2px solid #222;
   color: #222;
-  margin: auto auto;
+  margin: 0 auto;
   width: 10rem;
   font-size: 1rem;
   font-family: monospace;
