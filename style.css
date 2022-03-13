@@ -8,8 +8,8 @@
 
 
 body {
-  /*background-color: rgb(240, 100, 100); */
-  background-color: rgb(110, 220, 110); 
+  background-color: rgb(240, 100, 100); 
+  /*background-color: rgb(110, 220, 110); */
   font-family: monospace;
   color: whitesmoke;
   width: 100%;
@@ -47,12 +47,28 @@ img {
   display: hidden;
   text-align: center;
   box-shadow: 3px 3px #444;
-  /*animation: fade-In 1.2s; TODO implement animation */
+  
+  -webkit-animation-duration: 4s;
+  animation-duration: 4s;
 }
+
+@keyframes fadeIn {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+  }
+
+.fadeIn {
+  -webkit-animation-name: fadeIn;
+  animation-name: fadeIn;
+}
+
+
 
 .hide {
   visibility: hidden;
 }
+
+
 
 .container {
   width: 80%;
