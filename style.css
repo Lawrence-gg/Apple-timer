@@ -47,10 +47,22 @@ img {
   display: hidden;
   text-align: center;
   box-shadow: 3px 3px #444;
-  
   -webkit-animation-duration: 4s;
   animation-duration: 4s;
+  display: grid;
+  place-items: center;
 }
+
+.quote-text {
+  font-size: 1.2rem;
+  font-style:italic;
+  color:whitesmoke;
+  margin: 8px;
+  
+}
+
+
+
 
 @keyframes fadeIn {
     0% {opacity: 0;}
@@ -125,4 +137,12 @@ footer {
   width: 100%;
   height: 100px;
   background-color: #222;
+  
+  
+}
+
+footer > p {
+  padding: 24px;
+  text-align: center;
+  
 }
